@@ -1,0 +1,26 @@
+title: openbangsamoro
+
+url: https://panukatan.io/openbangsamoro/
+
+template:
+  params:
+    bootswatch: sandstone
+    ganalytics:
+
+home:
+  links:
+  - text: Read about OpenBangsamoro
+    href: https://www.openbangsamoro.com
+
+  - text: Learn about Panukatan
+    href: https://panukatan.io
+
+reference:
+  - title: Description
+    contents:
+    - openbangsamoro
+
+  - title: Get data
+    contents:
+    - bangsa_ls
+
