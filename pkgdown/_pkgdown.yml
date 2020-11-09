@@ -22,5 +22,5 @@ reference:
 
   - title: Get data
     contents:
-    - bangsa_ls
-
+    - starts_with("bangsa_ls")
+    - starts_with("bangsa_get")
