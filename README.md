@@ -10,7 +10,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 ![R-CMD-check](https://github.com/panukatan/openbangsamoro/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
-The OpenBangsamoro initiative supports the use of open statistical,
+The **OpenBangsamoro** initiative supports the use of open statistical,
 geospatial, and administrative data for transparent, accountable, and
 participatory decision-making as the Autonomous Region in Muslim
 Mindanao (ARMM) transforms into the Bangsamoro Autonomous Region in
@@ -30,7 +30,7 @@ install.packages("openbangsamoro")
 [CRAN](https://cran.r-projecdt.org).
 
 The development version of the `openbangsamoro` package can be installed
-from [GitHub](https://github.com/) with:
+from [GitHub](https://github.com/panukatan/openbangsamoro) with:
 
 ``` r
 if(!require(remotes)) install.packages("remotes")

@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 ![R-CMD-check](https://github.com/panukatan/openbangsamoro/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
-The OpenBangsamoro initiative supports the use of open statistical, geospatial, and administrative data for transparent, accountable, and participatory decision-making as the Autonomous Region in Muslim Mindanao (ARMM) transforms into the Bangsamoro Autonomous Region in Muslim Mindanao.
+The **OpenBangsamoro** initiative supports the use of open statistical, geospatial, and administrative data for transparent, accountable, and participatory decision-making as the Autonomous Region in Muslim Mindanao (ARMM) transforms into the Bangsamoro Autonomous Region in Muslim Mindanao.
 
 ## Installation
 
@@ -34,7 +34,7 @@ install.packages("openbangsamoro")
 
 `openbangsamoro` package is not yet available on [CRAN](https://cran.r-projecdt.org).
 
-The development version of the `openbangsamoro` package can be installed from [GitHub](https://github.com/) with:
+The development version of the `openbangsamoro` package can be installed from [GitHub](https://github.com/panukatan/openbangsamoro) with:
 
 ```{r install, echo = TRUE, eval = FALSE}
 if(!require(remotes)) install.packages("remotes")
