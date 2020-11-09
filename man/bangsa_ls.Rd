@@ -2,9 +2,20 @@
 % Please edit documentation in R/bangsa_get.R
 \name{bangsa_ls}
 \alias{bangsa_ls}
+\alias{bangsa_ls_geodata}
+\alias{bangsa_ls_tabular}
+\alias{bangsa_ls_docs}
 \title{List files and folders within the OpenBangsamoro Google Drive database}
 \usage{
 bangsa_ls(id = "1W8JV4hth_gs1V6efb92HMz0eU2LRYbOO")
+
+bangsa_ls_geodata(id = bangsa_ls()$id[bangsa_ls()$name == "1-Geodata"])
+
+bangsa_ls_tabular(id = bangsa_ls()$id[bangsa_ls()$name == "2-Tabular Data"])
+
+bangsa_ls_docs(
+  id = bangsa_ls()$id[bangsa_ls()$name == "3-Development Plans, Studies, and Reports"]
+)
 }
 \arguments{
 \item{id}{Character vector of the OpenBangsamoro \strong{Google Drive} id. This is
