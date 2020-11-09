@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>List files and folders within the OpenBangsamoro Google Drive database — bangsa_ls • openbangsamoro</title>
+<title>Get the OpenBangsamoro Database inventory — bangsa_get_inventory • openbangsamoro</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,9 +46,8 @@
 
 
 
-<meta property="og:title" content="List files and folders within the OpenBangsamoro Google Drive database — bangsa_ls" />
-<meta property="og:description" content="A convenience wrapper to googledrive functions set to specifically access
-the OpenBangsamoro Google Drive database and list files and folders within." />
+<meta property="og:title" content="Get the OpenBangsamoro Database inventory — bangsa_get_inventory" />
+<meta property="og:description" content="Get the OpenBangsamoro Database inventory" />
 <meta property="og:image" content="https://panukatan.io/openbangsamoro/logo.png" />
 
 
@@ -117,57 +116,52 @@ the OpenBangsamoro Google Drive database and list files and folders within." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>List files and folders within the OpenBangsamoro Google Drive database</h1>
+    <h1>Get the OpenBangsamoro Database inventory</h1>
     <small class="dont-index">Source: <a href='https://github.com/panukatan/openbangsamoro/blob/master/R/bangsa_get.R'><code>R/bangsa_get.R</code></a></small>
-    <div class="hidden name"><code>bangsa_ls.Rd</code></div>
+    <div class="hidden name"><code>bangsa_get_inventory.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A convenience wrapper to googledrive functions set to specifically access
-the OpenBangsamoro Google Drive database and list files and folders within.</p>
+    <p>Get the OpenBangsamoro Database inventory</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bangsa_ls</span><span class='op'>(</span>id <span class='op'>=</span> <span class='st'>"1W8JV4hth_gs1V6efb92HMz0eU2LRYbOO"</span><span class='op'>)</span>
-
-<span class='fu'>bangsa_ls_geodata</span><span class='op'>(</span>id <span class='op'>=</span> <span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>id</span><span class='op'>[</span><span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>name</span> <span class='op'>==</span> <span class='st'>"1-Geodata"</span><span class='op'>]</span><span class='op'>)</span>
-
-<span class='fu'>bangsa_ls_tabular</span><span class='op'>(</span>id <span class='op'>=</span> <span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>id</span><span class='op'>[</span><span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>name</span> <span class='op'>==</span> <span class='st'>"2-Tabular Data"</span><span class='op'>]</span><span class='op'>)</span>
-
-<span class='fu'>bangsa_ls_docs</span><span class='op'>(</span>
-  id <span class='op'>=</span> <span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>id</span><span class='op'>[</span><span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>name</span> <span class='op'>==</span> <span class='st'>"3-Development Plans, Studies, and Reports"</span><span class='op'>]</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>bangsa_get_inventory</span><span class='op'>(</span>dataset <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"geospatial"</span>, <span class='st'>"tabular"</span>, <span class='st'>"docs"</span><span class='op'>)</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p>Character vector of the OpenBangsamoro <strong>Google Drive</strong> id. This is
-currently set to <em>1W8JV4hth_gs1V6efb92HMz0eU2LRYbOO</em></p></td>
+      <th>dataset</th>
+      <td><p>A string value from either <code>"geospatial"</code>, <code>"tabular"</code>, or
+<code>"docs"</code> specifying the inventory to retrieve.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble of names and ids of files and folders within the the
-OpenBangsamoro Google Drive</p>
+    <p>A tibble of the specified inventory of various datasets available in
+the OpenBangsamoro Database.</p>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ernest Guevarra</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bangsa_ls</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 8 x 3</span><span>
-#&gt;   name                                  id                       drive_resource 
-#&gt; </span><span style='color: #BCBCBC;'>*</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                                 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>         
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span> Bangsamoro Open Data Inventory        1599Dm3Csc1p328Y4HPgiVD… </span><span style='color: #949494;'>&lt;named list [2</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>2</span><span> 6-Videos and Creative Materials       1lLECj4EYGE6q4u10OnSHOn… </span><span style='color: #949494;'>&lt;named list [2</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>3</span><span> Open Data for the Bangsamoro Transit… 156P7OFpe6-6Ztpxr_TKBDM… </span><span style='color: #949494;'>&lt;named list [3</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>4</span><span> 3-Development Plans, Studies, and Re… 1BTBOftyBbiiD-j1-RNuF-3… </span><span style='color: #949494;'>&lt;named list [2</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>5</span><span> 5-New Maps                            1deajEdTPp9zVZtWxK9nt7C… </span><span style='color: #949494;'>&lt;named list [2</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>6</span><span> 4-Data Management and Mapping Resour… 12dspkzv8aybLghz5Q0FgCW… </span><span style='color: #949494;'>&lt;named list [2</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>7</span><span> 2-Tabular Data                        11JcnI87IW0o9cnnnvjn8oC… </span><span style='color: #949494;'>&lt;named list [2</span><span>…
-#&gt; </span><span style='color: #BCBCBC;'>8</span><span> 1-Geodata                             1JG0aEtiTYgy7r_ElhCGpY7… </span><span style='color: #949494;'>&lt;named list [2</span><span>…</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='co'>## Retrieve the geospatial datasets inventory</span>
+<span class='fu'>bangsa_get_inventory</span><span class='op'>(</span>dataset <span class='op'>=</span> <span class='st'>"geospatial"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Reading from "Bangsamoro Open Data Inventory"</span></div><div class='output co'>#&gt; <span class='message'>Range "'Geospatial'"</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 58 x 8</span><span>
+#&gt;    CATEGORY TITLE FILENAME `FILE FORMAT` `SOURCE AGENCY` `DATE OF PUBLIC…
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Adminis… ARMM… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> Adminis… Bang… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Adminis… ARMM… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> Adminis… ARMM… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> Adminis… ARMM… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> Adminis… Bang… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> Adminis… Bang… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Adminis… Bang… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Adminis… Bang… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> Adminis… Bang… Adminis… SHP           Philippine Sta…             </span><span style='text-decoration: underline;'>2</span><span>016
+#&gt; </span><span style='color: #949494;'># … with 48 more rows, and 2 more variables: REFERENCE </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, DESCRIPTION </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
