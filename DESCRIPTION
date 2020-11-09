@@ -13,7 +13,8 @@ Description: The OpenBangsamoro initiative supports the use of open statistical,
     (ARMM) transforms into the Bangsamoro Autonomous Region in Muslim Mindanao.
 License: GPL-3
 Imports: 
-    googledrive
+    googledrive,
+    googlesheets4
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
@@ -21,4 +22,3 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://panukatan.io/openbangsamoro/, https://github.com/panukatan/openbangsamoro
 BugReports: https://github.com/panukatan/openbangsamoro/issues
-
