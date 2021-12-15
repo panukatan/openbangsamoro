@@ -127,14 +127,14 @@ bangsa_get_inventory <- function(dataset = c("geospatial", "tabular", "docs")) {
   ## Define dataset argument
   dataset <- match.arg(dataset)
 
-  sheet <- switch(EXPR = dataset,
-                  geospatial = 1,
-                  tabular = 2,
-                  docs = 3)
+  sheet <- switch(
+    EXPR = dataset, geospatial = 1, tabular = 2, docs = 3
+  )
 
   ## Read the specified inventory
-  x <- googlesheets4::read_sheet(ss = "1599Dm3Csc1p328Y4HPgiVDSh3KAJi18rzVd5VXojm9Q",
-                                 sheet = sheet)
+  x <- googlesheets4::read_sheet(
+    ss = "1599Dm3Csc1p328Y4HPgiVDSh3KAJi18rzVd5VXojm9Q", sheet = sheet
+  )
 
   ## Return x
   return(x)
@@ -164,8 +164,10 @@ bangsa_get_metadata <- function() {
   googlesheets4::gs4_deauth()
 
   ## Read the specified inventory
-  x <- googlesheets4::read_sheet(ss = "1599Dm3Csc1p328Y4HPgiVDSh3KAJi18rzVd5VXojm9Q",
-                                 sheet = "Metadata", skip = 1)
+  x <- googlesheets4::read_sheet(
+    ss = "1599Dm3Csc1p328Y4HPgiVDSh3KAJi18rzVd5VXojm9Q",
+    sheet = "Metadata", skip = 1
+  )
 
   ## Return x
   return(x)
