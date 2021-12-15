@@ -12,14 +12,16 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 ![R-CMD-check](https://github.com/panukatan/openbangsamoro/workflows/R-CMD-check/badge.svg)
 [![test-coverage](https://github.com/panukatan/openbangsamoro/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/panukatan/openbangsamoro/actions/workflows/test-coverage.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/panukatan/openbangsamoro/branch/main/graph/badge.svg)](https://codecov.io/gh/panukatan/openbangsamoro?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/panukatan/openbangsamoro/badge)](https://www.codefactor.io/repository/github/panukatan/openbangsamoro)
 <!-- badges: end -->
 
-The **OpenBangsamoro** initiative supports the use of open statistical,
-geospatial, and administrative data for transparent, accountable, and
-participatory decision-making as the Autonomous Region in Muslim
-Mindanao (ARMM) transforms into the Bangsamoro Autonomous Region in
-Muslim Mindanao.
+The [**OpenBangsamoro** initiative](https://www.openbangsamoro.com)
+supports the use of open statistical, geospatial, and administrative
+data for transparent, accountable, and participatory decision-making as
+the Autonomous Region in Muslim Mindanao (ARMM) transforms into the
+Bangsamoro Autonomous Region in Muslim Mindanao.
 
 ## Installation
 

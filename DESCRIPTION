@@ -16,6 +16,7 @@ Imports:
     googledrive,
     googlesheets4
 Suggests: 
+    covr,
     spelling
 Encoding: UTF-8
 Language: en-GB
@@ -24,4 +25,3 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 URL: https://panukatan.io/openbangsamoro/, https://github.com/panukatan/openbangsamoro
 BugReports: https://github.com/panukatan/openbangsamoro/issues
-
