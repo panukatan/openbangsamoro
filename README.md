@@ -8,6 +8,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 ![R-CMD-check](https://github.com/panukatan/openbangsamoro/workflows/R-CMD-check/badge.svg)
+[![CodeFactor](https://www.codefactor.io/repository/github/panukatan/openbangsamoro/badge)](https://www.codefactor.io/repository/github/panukatan/openbangsamoro)
 <!-- badges: end -->
 
 The **OpenBangsamoro** initiative supports the use of open statistical,

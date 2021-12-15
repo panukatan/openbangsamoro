@@ -15,10 +15,13 @@ License: GPL-3
 Imports: 
     googledrive,
     googlesheets4
+Suggests: 
+    spelling
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 URL: https://panukatan.io/openbangsamoro/, https://github.com/panukatan/openbangsamoro
 BugReports: https://github.com/panukatan/openbangsamoro/issues
+
