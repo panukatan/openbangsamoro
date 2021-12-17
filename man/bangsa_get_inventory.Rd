@@ -4,7 +4,7 @@
 \alias{bangsa_get_inventory}
 \title{Get the OpenBangsamoro Database inventory}
 \usage{
-bangsa_get_inventory(dataset = c("geospatial", "tabular", "docs"))
+bangsa_get_inventory(dataset = c("geospatial", "tabular", "docs", "metadata"))
 }
 \arguments{
 \item{dataset}{A string value from either \code{"geospatial"}, \code{"tabular"}, or

@@ -44,15 +44,18 @@ bangsa_ls <- function(id = "1W8JV4hth_gs1V6efb92HMz0eU2LRYbOO") {
 #
 ################################################################################
 
-bangsa_ls_geodata <- function(id = bangsa_ls()$id[bangsa_ls()$name == "1-Geodata"]) {
+bangsa_ls_geodata <- function(recursive = FALSE) {
+  ## Get id
+  id = bangsa_ls()$id[bangsa_ls()$name == "1-Geodata"]
+
   ## Google Drive deauthorisation
   googledrive::drive_deauth()
 
   ## Get id
-  x <- bangsa_ls(id = id)
+  x <- bangsa_ls(id = id, recursive = recursive)
 
   ## Return x
-  return(x)
+  x
 }
 
 
@@ -120,7 +123,8 @@ bangsa_ls_docs <- function(id = bangsa_ls()$id[bangsa_ls()$name == "3-Developmen
 #
 ################################################################################
 
-bangsa_get_inventory <- function(dataset = c("geospatial", "tabular", "docs")) {
+bangsa_get_inventory <- function(dataset = c("geospatial", "tabular",
+                                             "docs", "metadata")) {
   ## googlesheets deauthorise
   googlesheets4::gs4_deauth()
 
@@ -128,16 +132,17 @@ bangsa_get_inventory <- function(dataset = c("geospatial", "tabular", "docs")) {
   dataset <- match.arg(dataset)
 
   sheet <- switch(
-    EXPR = dataset, geospatial = 1, tabular = 2, docs = 3
+    EXPR = dataset, geospatial = 1, tabular = 2, docs = 3, metadata = 4
   )
 
   ## Read the specified inventory
   x <- googlesheets4::read_sheet(
-    ss = "1599Dm3Csc1p328Y4HPgiVDSh3KAJi18rzVd5VXojm9Q", sheet = sheet
+    ss = "1599Dm3Csc1p328Y4HPgiVDSh3KAJi18rzVd5VXojm9Q", sheet = sheet,
+    skip = ifelse(sheet == 4, 1, 0)
   )
 
   ## Return x
-  return(x)
+  x
 }
 
 
