@@ -2,8 +2,8 @@
 % Please edit documentation in R/openbangsamoro.R
 \docType{package}
 \name{openbangsamoro}
-\alias{openbangsamoro}
 \alias{openbangsamoro-package}
+\alias{openbangsamoro}
 \title{An Interface to the OpenBangsamoro Database}
 \description{
 The OpenBangsamoro initiative supports the use of open statistical,

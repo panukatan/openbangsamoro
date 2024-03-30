@@ -44,7 +44,7 @@ bangsa_ls <- function(id = "1W8JV4hth_gs1V6efb92HMz0eU2LRYbOO") {
 #
 ################################################################################
 
-bangsa_ls_geodata <- function(recursive = FALSE) {
+bangsa_ls_geodata <- function() {
   ## Get id
   id = bangsa_ls()$id[bangsa_ls()$name == "1-Geodata"]
 
@@ -52,7 +52,7 @@ bangsa_ls_geodata <- function(recursive = FALSE) {
   googledrive::drive_deauth()
 
   ## Get id
-  x <- bangsa_ls(id = id, recursive = recursive)
+  x <- bangsa_ls(id = id)
 
   ## Return x
   x

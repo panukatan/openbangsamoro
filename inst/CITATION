@@ -1,0 +1,16 @@
+citHeader("To cite openbangsamoro in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "openbangsamoro: An Interface to the Open Bangsamoro Database",
+  author   = person("Ernest Guevarra"),
+  year     = "2024",
+  note     = "R package version 0.0.0.9000",
+  url      = "https://panukatan.io/openbangsamoro/",
+  textVersion = paste(
+    "Ernest Guevarra (2024).",
+    "openbangsamoro: An Interface to the Open Bangsamoro Database",
+    "R package version 0.0.0.9000",
+    "URL https://panukatan.io/openbangsamoro/"
+  )
+)

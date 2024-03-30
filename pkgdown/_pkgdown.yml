@@ -3,24 +3,36 @@ title: openbangsamoro
 url: https://panukatan.io/openbangsamoro/
 
 template:
-  params:
-    bootswatch: sandstone
-    ganalytics:
+  bootstrap: 5
+  bootswatch: cosmo
+  theme: haddock
+  ganalytics: ~
 
 home:
   links:
   - text: Read about OpenBangsamoro
     href: https://www.openbangsamoro.com
-
   - text: Learn about Panukatan
     href: https://panukatan.io
 
+navbar:
+  bg: info
+  type: light
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - news
+  components: ~
+
 reference:
   - title: Description
-    contents:
-    - openbangsamoro
+    contents: openbangsamoro
 
   - title: Get data
     contents:
     - starts_with("bangsa_ls")
     - starts_with("bangsa_get")
+

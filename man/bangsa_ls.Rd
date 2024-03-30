@@ -9,7 +9,7 @@
 \usage{
 bangsa_ls(id = "1W8JV4hth_gs1V6efb92HMz0eU2LRYbOO")
 
-bangsa_ls_geodata(id = bangsa_ls()$id[bangsa_ls()$name == "1-Geodata"])
+bangsa_ls_geodata()
 
 bangsa_ls_tabular(id = bangsa_ls()$id[bangsa_ls()$name == "2-Tabular Data"])
 
